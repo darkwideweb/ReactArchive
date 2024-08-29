@@ -44,7 +44,7 @@ const Navigation = ({ toggleTheme, currentTheme }) => {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        sx={{ display: 'flex', justifyContent: 'space-between', padding: '10px 24px' }}
+        sx={{ display: 'flex', justifyContent: 'space-between', padding: { xs: '8px 16px', sm: '10px 24px' } }}
       >
         <motion.div
           initial={{ opacity: 0 }}
@@ -74,7 +74,7 @@ const Navigation = ({ toggleTheme, currentTheme }) => {
           </Typography>
         </motion.div>
 
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
           {[
             { to: "/", label: "Главная", icon: <Home /> },
             { to: "/lessons", label: "Уроки", icon: <School /> },
